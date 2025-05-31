@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-danger" href="/listing"
+      ><i class="fa-regular fa-compass p-2"></i><b>Airbnb</b></a
+    >
+    <div class="container-fluid col-4 offset-3">
+      <form class="d-flex br-2" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+
+        <button class="btn btn-danger d-flex gap-2" type="submit" ><i class="fa-solid fa-magnifying-glass mt-1"></i>Search</button>
+      </form>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/listing/new"
+              >Airbnb your home</a
+            >
+          </li>
+          <% if(!curruser){%>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/users/signup">
+              <b>Signup</b></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/users/login"
+              ><b>Login</b></a
+            >
+          </li>
+          <%}%> <% if(curruser){%>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/logout"
+              ><b>Logout</b></a
+            >
+          </li>
+          <%}%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<script></script>
